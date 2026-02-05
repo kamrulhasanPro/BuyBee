@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "@/components/shares/TopBar";
+import MainHeader from "../components/shares/MainHeader";
 
 export const metadata: Metadata = {
   title: "BuyBee Home",
@@ -19,6 +20,7 @@ export default function RootLayout({
         {/* header */}
         <header>
           <TopBar/>
+          <MainHeader/>
         </header>
 
         {/* main */}

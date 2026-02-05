@@ -9,7 +9,7 @@ import React from "react";
 const TopBar = () => {
   return (
     // top bar section
-    <section className="bg-primary border-b border-sidebar-border py-4 px-[4%] text-white flex items-center justify-between ">
+    <div className="bg-primary border-b border-sidebar-border py-4 px-[7%] text-white flex items-center justify-between ">
       {/* email */}
       <p>✉️ Email: support@buybee.com</p>
 
@@ -28,7 +28,7 @@ const TopBar = () => {
           <LinkedinIcon />
         </a>
       </div>
-    </section>
+    </div>
   );
 };
 
