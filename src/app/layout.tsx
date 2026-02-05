@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import TopBar from "@/components/shares/TopBar";
 
 export const metadata: Metadata = {
   title: "BuyBee Home",
@@ -13,7 +14,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+
+        {/* header */}
+        <header>
+          <TopBar/>
+        </header>
+
+        {/* main */}
+        <main>
+        {children}
+        </main>
+        
+        {/* footer */}
+        <footer>
+          {/* footer */}
+        </footer>
+        </body>
     </html>
   );
 }
