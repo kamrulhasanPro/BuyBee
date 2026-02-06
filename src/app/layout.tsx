@@ -4,6 +4,8 @@ import "./globals.css";
 import TopBar from "@/components/shares/TopBar";
 import MainHeader from "../components/shares/MainHeader";
 import Navbar from "@/components/shares/Navbar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const poppins =  Poppins({
   weight: ["400", "500", "600", "700"],

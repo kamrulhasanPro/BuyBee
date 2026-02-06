@@ -6,6 +6,23 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.postimg.cc",
+        // port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+      // new URL("https://i.ibb.co.com/**"),
+      // new URL("https://bk.shajgoj.com/storage/2025/12/sku-11589-y5ou.jpg"),
+    ],
+  },
 };
 
 export default nextConfig;
