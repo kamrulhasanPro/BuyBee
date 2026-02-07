@@ -1,3 +1,4 @@
+import BestProducts from "@/components/sections/Home/BestProducts";
 import ElectronicBrands from "@/components/sections/Home/ElectronicBrands";
 import Hero from "@/components/sections/Home/Hero";
 import NewArrivals from "@/components/sections/Home/NewArrivals";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <TopCategory/>
       <ElectronicBrands/>
+      <BestProducts/>
       <NewArrivals/>
     </>
   );

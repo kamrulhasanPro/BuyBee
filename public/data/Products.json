@@ -1,0 +1,182 @@
+[
+  {
+    "id": "p101",
+    "title": "ASUS FHD Gaming Laptop",
+    "slug": "asus-fhd-gaming-laptop",
+    "categoryId": "laptops",
+    "brand": "ASUS",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/laptop1.png"
+    ],
+
+    "price": 960,
+    "originalPrice": 1160,
+    "discountPercent": 35,
+
+    "rating": 4.8,
+    "reviewCount": 65,
+
+    "isNew": false,
+    "isFeatured": true,
+
+    "stock": 12,
+    "createdAt": "2025-01-10"
+  },
+  {
+    "id": "p102",
+    "title": "IPS LCD Gaming Monitor",
+    "slug": "ips-lcd-gaming-monitor",
+    "categoryId": "monitors",
+    "brand": "MSI",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/monitor1.png"
+    ],
+
+    "price": 1160,
+
+    "rating": 4.6,
+    "reviewCount": 65,
+
+    "isNew": false,
+    "isFeatured": false,
+
+    "stock": 20,
+    "createdAt": "2025-01-05"
+  },
+  {
+    "id": "p103",
+    "title": "HAVIT HV-G92 Gamepad",
+    "slug": "havit-hv-g92-gamepad",
+    "categoryId": "gaming",
+    "brand": "HAVIT",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/gamepad1.png"
+    ],
+
+    "price": 560,
+
+    "rating": 4.9,
+    "reviewCount": 65,
+
+    "isNew": true,
+    "isFeatured": true,
+
+    "stock": 40,
+    "createdAt": "2025-01-15"
+  },
+  {
+    "id": "p104",
+    "title": "AK-900 Wired Keyboard",
+    "slug": "ak-900-wired-keyboard",
+    "categoryId": "accessories",
+    "brand": "AK",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/keyboard1.png"
+    ],
+
+    "price": 200,
+
+    "rating": 4.4,
+    "reviewCount": 65,
+
+    "isNew": false,
+    "isFeatured": false,
+
+    "stock": 100,
+    "createdAt": "2024-12-28"
+  },
+  {
+    "id": "p105",
+    "title": "Apple MacBook Air",
+    "slug": "apple-macbook-air-2025",
+    "categoryId": "laptops",
+    "brand": "Apple",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/macbook1.png"
+    ],
+
+    "price": 849,
+    "originalPrice": 999,
+    "discountPercent": 15,
+
+    "rating": 4.5,
+    "reviewCount": 12,
+
+    "isNew": true,
+    "isFeatured": true,
+
+    "stock": 8,
+    "createdAt": "2025-01-18"
+  },
+  {
+    "id": "p106",
+    "title": "iPhone 15 Pro Max",
+    "slug": "iphone-15-pro-max",
+    "categoryId": "mobiles",
+    "brand": "Apple",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/iphone1.png"
+    ],
+
+    "price": 1199,
+
+    "rating": 4.9,
+    "reviewCount": 210,
+
+    "isNew": true,
+    "isFeatured": true,
+
+    "stock": 15,
+    "createdAt": "2025-01-20"
+  },
+  {
+    "id": "p107",
+    "title": "Logitech Wireless Headphones",
+    "slug": "logitech-wireless-headphones",
+    "categoryId": "accessories",
+    "brand": "Logitech",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/headphone1.png"
+    ],
+
+    "price": 180,
+
+    "rating": 4.3,
+    "reviewCount": 48,
+
+    "isNew": false,
+    "isFeatured": false,
+
+    "stock": 60,
+    "createdAt": "2024-12-15"
+  },
+  {
+    "id": "p108",
+    "title": "Sony PlayStation Game",
+    "slug": "sony-playstation-controller",
+    "categoryId": "gaming",
+    "brand": "Sony",
+
+    "images": [
+      "https://res.cloudinary.com/demo/image/upload/controller1.png"
+    ],
+
+    "price": 320,
+
+    "rating": 4.7,
+    "reviewCount": 98,
+
+    "isNew": false,
+    "isFeatured": false,
+
+    "stock": 25,
+    "createdAt": "2024-12-20"
+  }
+]

@@ -36,7 +36,7 @@ export default function Hero() {
       <ReuseableSlide settings={settings}>
         {carouselImage.map((carousel, i) => (
           <div key={i}>
-            <div className="flex flex-col md:flex-row gap-4 justify-between bg-gradient-to-r from-blue-500/20 via-sky-400/20 to-indigo-500/20 px-6 pt-6 md:h-[calc(100vh-66px-112px-48px)]">
+            <div className="flex flex-col md:flex-row gap-4 justify-between bg-gradient-to-r from-blue-500/20 via-sky-400/20 to-indigo-500/20 px-6 pt-6 md:h-[calc(100vh-66px-112px-24px)]">
               {/* text content */}
               <div className="flex-1 flex flex-col items-center justify-center gap-2 text-center">
                 <h5 className="text-3xl md:text-5xl text-secondary">

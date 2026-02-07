@@ -25,7 +25,7 @@ const MainHeader = () => {
 
   return (
     // main header
-    <div className="px-[4%] py-6 space-y-2">
+    <div className="px-[4%] py-3 space-y-2">
       <div className="flex items-center justify-between gap-6 mx-auto">
         {/* logo */}
         <Link
