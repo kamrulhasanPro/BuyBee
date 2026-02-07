@@ -1,20 +1,11 @@
+import { getProducts } from "@/actions/Actions";
 import ProductCard from "@/components/cards/ProductCard";
 import MyContainer from "@/components/shares/MyContainer";
 import MyTitle from "@/components/shares/MyTitle";
 import { Button } from "@/components/ui/button";
 import { ProductType } from "@/types/types";
+import Link from "next/link";
 import React from "react";
-
-export const getProducts = async () => {
-  const res = await fetch("http://localhost:3000/data/Products.json");
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
-  const data = await res.json();
-
-  return data;
-};
 
 const BestProducts = async () => {
   const products: ProductType[] = await getProducts();
@@ -29,7 +20,9 @@ const BestProducts = async () => {
         </MyTitle>
 
         {/* button */}
-        <Button>View All</Button>
+        <Link href={"/products"}>
+          <Button className="cursor-pointer">View All</Button>
+        </Link>
       </div>
 
       {/* products */}
