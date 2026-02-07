@@ -7,6 +7,15 @@
     "brand": "ASUS",
     "images": ["https://res.cloudinary.com/demo/image/upload/laptop1.png"],
 
+    "description": "The ASUS FHD Gaming Laptop delivers powerful performance with a high-refresh-rate display, designed for gamers and power users who need speed and reliability.",
+    "keyFeatures": [
+      "15.6-inch Full HD display",
+      "High-performance gaming processor",
+      "Dedicated graphics card",
+      "Fast SSD storage",
+      "Backlit keyboard"
+    ],
+
     "price": 960,
     "originalPrice": 1160,
 
@@ -28,6 +37,15 @@
     "brand": "MSI",
     "images": ["https://res.cloudinary.com/demo/image/upload/monitor1.png"],
 
+    "description": "This IPS LCD gaming monitor provides vibrant colors, sharp visuals, and smooth performance for immersive gaming and professional use.",
+    "keyFeatures": [
+      "27-inch IPS LCD panel",
+      "Full HD resolution",
+      "Wide viewing angles",
+      "Low response time",
+      "Anti-glare screen"
+    ],
+
     "price": 1160,
 
     "reviews": { "5": 80, "4": 34, "3": 20, "2": 6, "1": 5 },
@@ -47,6 +65,15 @@
     "categoryId": "gaming",
     "brand": "HAVIT",
     "images": ["https://res.cloudinary.com/demo/image/upload/gamepad1.png"],
+
+    "description": "The HAVIT HV-G92 Gamepad offers precise controls and ergonomic design, making it ideal for PC and console gamers.",
+    "keyFeatures": [
+      "Ergonomic grip design",
+      "Dual vibration feedback",
+      "USB wired connection",
+      "Compatible with PC and consoles",
+      "Durable build quality"
+    ],
 
     "price": 560,
 
@@ -68,6 +95,15 @@
     "brand": "AK",
     "images": ["https://res.cloudinary.com/demo/image/upload/keyboard1.png"],
 
+    "description": "The AK-900 Wired Keyboard is built for everyday productivity with a comfortable layout and responsive keys.",
+    "keyFeatures": [
+      "Full-size keyboard layout",
+      "Responsive membrane keys",
+      "USB wired connection",
+      "Durable keycaps",
+      "Plug-and-play support"
+    ],
+
     "price": 200,
 
     "reviews": { "5": 60, "4": 30, "3": 20, "2": 8, "1": 7 },
@@ -87,6 +123,15 @@
     "categoryId": "laptops",
     "brand": "Apple",
     "images": ["https://res.cloudinary.com/demo/image/upload/macbook1.png"],
+
+    "description": "Apple MacBook Air (2025) features the latest Apple silicon, delivering exceptional performance, battery life, and a premium design.",
+    "keyFeatures": [
+      "13.6-inch Liquid Retina display",
+      "Apple M3 chip",
+      "8GB unified memory",
+      "256GB SSD storage",
+      "All-day battery life"
+    ],
 
     "price": 849,
     "originalPrice": 999,
@@ -109,6 +154,15 @@
     "brand": "Apple",
     "images": ["https://res.cloudinary.com/demo/image/upload/iphone1.png"],
 
+    "description": "The iPhone 15 Pro Max combines cutting-edge performance, an advanced camera system, and a stunning display.",
+    "keyFeatures": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Pro chip",
+      "Pro-grade camera system",
+      "5G connectivity",
+      "Face ID security"
+    ],
+
     "price": 1199,
 
     "reviews": { "5": 160, "4": 35, "3": 10, "2": 3, "1": 2 },
@@ -120,6 +174,7 @@
     "stock": 15,
     "createdAt": "2025-01-20"
   },
+
   {
     "id": "p107",
     "title": "Logitech Wireless Headphones",
@@ -127,6 +182,15 @@
     "categoryId": "accessories",
     "brand": "Logitech",
     "images": ["https://res.cloudinary.com/demo/image/upload/headphone1.png"],
+
+    "description": "Logitech Wireless Headphones deliver clear sound and long-lasting comfort for work, gaming, and entertainment.",
+    "keyFeatures": [
+      "Wireless Bluetooth connectivity",
+      "Noise isolation design",
+      "Long battery life",
+      "Built-in microphone",
+      "Lightweight and comfortable"
+    ],
 
     "price": 180,
 
@@ -148,6 +212,15 @@
     "brand": "Sony",
     "images": ["https://res.cloudinary.com/demo/image/upload/controller1.png"],
 
+    "description": "The Sony PlayStation Controller offers precise controls, haptic feedback, and an ergonomic design for immersive gameplay.",
+    "keyFeatures": [
+      "Ergonomic grip",
+      "Haptic feedback",
+      "Wireless connectivity",
+      "Built-in rechargeable battery",
+      "Compatible with PlayStation consoles"
+    ],
+
     "price": 320,
 
     "reviews": { "5": 78, "4": 14, "3": 4, "2": 1, "1": 1 },
@@ -167,6 +240,15 @@
     "categoryId": "monitors",
     "brand": "Samsung",
     "images": ["https://res.cloudinary.com/demo/image/upload/monitor2.png"],
+
+    "description": "The Samsung Curved Monitor provides an immersive viewing experience with a sleek design and vibrant visuals.",
+    "keyFeatures": [
+      "27-inch curved display",
+      "Full HD resolution",
+      "Eye comfort technology",
+      "Slim modern design",
+      "HDMI and DisplayPort support"
+    ],
 
     "price": 890,
     "originalPrice": 1050,
@@ -189,6 +271,15 @@
     "brand": "Redragon",
     "images": ["https://res.cloudinary.com/demo/image/upload/keyboard2.png"],
 
+    "description": "The Redragon Mechanical RGB Keyboard is designed for gamers who demand precision, durability, and customizable lighting.",
+    "keyFeatures": [
+      "Mechanical switches",
+      "Customizable RGB lighting",
+      "Anti-ghosting keys",
+      "Durable metal frame",
+      "USB wired connection"
+    ],
+
     "price": 260,
 
     "reviews": { "5": 48, "4": 32, "3": 15, "2": 3, "1": 2 },
@@ -209,6 +300,15 @@
     "brand": "Apple",
     "images": ["https://res.cloudinary.com/demo/image/upload/ipad1.png"],
 
+    "description": "The Apple iPad Air (2025) delivers powerful performance and versatility in a thin and lightweight design.",
+    "keyFeatures": [
+      "10.9-inch Liquid Retina display",
+      "Apple M-series chip",
+      "Apple Pencil support",
+      "Long battery life",
+      "Touch ID security"
+    ],
+
     "price": 699,
 
     "reviews": { "5": 85, "4": 18, "3": 6, "2": 1, "1": 0 },
@@ -228,6 +328,15 @@
     "categoryId": "storage",
     "brand": "Seagate",
     "images": ["https://res.cloudinary.com/demo/image/upload/harddrive1.png"],
+
+    "description": "The Seagate 1TB External Hard Drive offers reliable storage and fast data transfer for backups and everyday use.",
+    "keyFeatures": [
+      "1TB storage capacity",
+      "USB 3.0 connectivity",
+      "Compact and portable design",
+      "Fast data transfer speeds",
+      "Plug-and-play compatibility"
+    ],
 
     "price": 120,
 

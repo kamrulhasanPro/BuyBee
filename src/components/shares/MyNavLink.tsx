@@ -6,13 +6,14 @@ import React from "react";
 const MyNavLink = ({
   href,
   children,
+  end = false,
 }: {
   href: string;
   children: React.ReactNode;
+  end?: boolean;
 }) => {
   const location = usePathname();
-  const active = location === href;
-  const defaultStyle = "";
+  const active = end ? location.includes(href) : location === href;
 
   return (
     <Link

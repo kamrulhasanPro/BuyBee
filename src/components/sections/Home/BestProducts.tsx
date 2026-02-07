@@ -9,7 +9,6 @@ import React from "react";
 
 const BestProducts = async () => {
   const products: ProductType[] = await getProducts();
-  console.log(products);
 
   return (
     <MyContainer className="space-y-10">

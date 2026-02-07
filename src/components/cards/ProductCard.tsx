@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { ShoppingCartIcon, StarIcon } from "lucide-react";
+import Link from "next/link";
 
 const ProductCard = ({
   product,
@@ -12,6 +13,7 @@ const ProductCard = ({
   ratingShow?: boolean;
 }) => {
   const {
+    id,
     title,
     images,
     price,
@@ -41,15 +43,17 @@ const ProductCard = ({
         )}
 
         {/* product image */}
-        <figure className="p-3 flex items-center justify-center">
-          <Image
-            src="https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
-            width={200}
-            height={200}
-            alt={title}
-            className="hover:scale-105 duration-300 cursor-pointer"
-          />
-        </figure>
+        <Link href={`/products/${id}`}>
+          <figure className="p-3 flex items-center justify-center">
+            <Image
+              src="https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
+              width={200}
+              height={200}
+              alt={title}
+              className="hover:scale-105 duration-300 cursor-pointer"
+            />
+          </figure>
+        </Link>
 
         {/* cart btn */}
         <Button className="rounded-none w-full cursor-pointer">
@@ -60,7 +64,7 @@ const ProductCard = ({
       {/* text content info */}
       <div className=" font-medium space-y-2">
         {/* title */}
-        <p>{title}</p>
+        <Link href={`/products/${id}`}>{title}</Link>
         {/* price */}
         <p className="text-[#DB4444]">
           ${price}{" "}
@@ -76,12 +80,16 @@ const ProductCard = ({
               averageRating > i + 1 ? (
                 <StarIcon
                   className=""
-                  fill="#FBBF24"
+                  fill="#FFAD33"
                   key={i}
-                  stroke="#FBBF24"
+                  stroke="#FFAD33"
                 />
               ) : (
-                <StarIcon key={i} stroke="#FBBF24" />
+                <StarIcon
+                  key={i}
+                  stroke="rgba(0, 0, 0, 0.1)"
+                  fill="rgba(0, 0, 0, 0.25)"
+                />
               ),
             )}
             <span className="text-gray-400">({reviewCount})</span>

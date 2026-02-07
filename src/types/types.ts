@@ -1,6 +1,8 @@
 export interface ProductType {
   id: string;
   title: string;
+  description: string;
+  keyFeatures: string[];
   slug: string;
   categoryId: string;
   brand: string;

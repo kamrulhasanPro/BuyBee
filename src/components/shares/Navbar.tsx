@@ -19,7 +19,7 @@ const Navbar = () => {
     <>
       <MyNavLink href="/">Home</MyNavLink>
       <MyNavLink href="/contact">Contact</MyNavLink>
-      <MyNavLink href="/products">Products</MyNavLink>
+      <MyNavLink href="/products" end={true}>Products</MyNavLink>
       <MyNavLink href="/hot-offers">Hot Offers</MyNavLink>
       <MyNavLink href="/combo">Combo</MyNavLink>
       <MyNavLink href="/clearance">Clearance</MyNavLink>
