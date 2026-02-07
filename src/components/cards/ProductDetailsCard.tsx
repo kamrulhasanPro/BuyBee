@@ -24,7 +24,7 @@ const ProductDetailsCard = ({ product }: { product: ProductType }) => {
     <section>
       <div className="flex flex-col md:flex-row gap-6">
         {/* product img */}
-        <figure className="flex-1 bg-[#FFFAFA] flex items-center justify-center">
+        <figure className="flex-1 bg-[#FFFAFA] flex items-center justify-center rounded-lg">
           <Image
             src={
               "https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
@@ -32,6 +32,7 @@ const ProductDetailsCard = ({ product }: { product: ProductType }) => {
             alt={title}
             width={400}
             height={400}
+            className="hover:scale-105 duration-300"
           />
         </figure>
 
