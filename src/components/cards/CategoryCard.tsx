@@ -13,7 +13,7 @@ const CategoryCard = ({ category }: { category: CategoryType }) => {
   return (
     <div className="px-1">
       <div
-        className={`flex flex-col items-center justify-center p-6 rounded-md border border-gray-200 ${bg} opacity-80 hover:opacity-100 duration-300`}
+        className={`flex flex-col items-center justify-center p-6 rounded-md border border-gray-200 ${bg} opacity-80 hover:opacity-100 duration-300 text-center text-nowrap`}
       >
         <div>
           <Icon size={52} />

@@ -9,13 +9,13 @@ const ArrowCustom = ({ ref }: slideType) => {
     <div className="flex gap-2">
       <button
         onClick={() => ref.current?.slickPrev()}
-        className="p-2.5 rounded-full bg-gray-300 cursor-pointer"
+        className="p-2.5 rounded-full bg-[#F5F5F5] cursor-pointer"
       >
         <ArrowLeft />
       </button>
       <button
         onClick={() => ref.current?.slickNext()}
-        className="p-2.5 rounded-full bg-gray-300 cursor-pointer"
+        className="p-2.5 rounded-full bg-[#F5F5F5] cursor-pointer"
       >
         <ArrowRight />
       </button>
