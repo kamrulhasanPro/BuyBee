@@ -2,7 +2,8 @@
 import React, { useRef } from "react";
 import MyContainer from "@/components/shares/MyContainer";
 import MyTitle from "@/components/shares/MyTitle";
-import ReuseableSlide from "@/components/shares/ReuseableSlide";import Slider from "react-slick";
+import ReuseableSlide from "@/components/shares/ReuseableSlide";
+import Slider from "react-slick";
 import ArrowCustom from "@/components/shares/ArrowCustom";
 import BrandsCard from "@/components/cards/BrandsCard";
 
@@ -78,7 +79,7 @@ const ElectronicBrands = () => {
   };
 
   return (
-    <MyContainer>
+    <MyContainer className="space-y-10">
       {/* title */}
       <div className="flex items-center justify-between gap-2">
         <MyTitle>
@@ -88,7 +89,7 @@ const ElectronicBrands = () => {
       </div>
 
       {/* slide */}
-      <div className="mt-5 ">
+      <div>
         <ReuseableSlide ref={slideRef} settings={settings}>
           {promoBanners.map((brand) => (
             <BrandsCard key={brand.id} brand={brand} />

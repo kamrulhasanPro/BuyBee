@@ -124,7 +124,7 @@ const TopCategory = () => {
   };
 
   return (
-    <MyContainer>
+    <MyContainer className="space-y-10">
       {/* title */}
       <div className="flex items-center justify-between gap-2">
         <MyTitle>
@@ -134,7 +134,7 @@ const TopCategory = () => {
       </div>
 
       {/* slide */}
-      <div className="mt-5 ">
+      <div>
         <ReuseableSlide ref={slideRef} settings={settings}>
           {categories.map((category) => (
             <CategoryCard key={category.id} category={category} />
