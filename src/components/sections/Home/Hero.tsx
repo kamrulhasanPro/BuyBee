@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="flex flex-col md:flex-row gap-4 justify-between bg-gradient-to-r from-blue-500/20 via-sky-400/20 to-indigo-500/20 px-6 pt-6 md:h-[calc(100vh-66px-112px-24px)]">
               {/* text content */}
               <div className="flex-1 flex flex-col items-center justify-center gap-2 text-center">
-                <h5 className="text-3xl md:text-5xl text-secondary">
+                <h5 className="text-3xl md:text-5xl text-[#FF36BC]">
                   {carousel.title}
                 </h5>
                 <p className="text-xl md:text-3xl text-white">

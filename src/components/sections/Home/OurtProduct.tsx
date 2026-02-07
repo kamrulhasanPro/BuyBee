@@ -16,7 +16,7 @@ export const getProducts = async () => {
   return data;
 };
 
-const BestProducts = async () => {
+const OurProducts = async () => {
   const products: ProductType[] = await getProducts();
   console.log(products);
 
@@ -25,21 +25,26 @@ const BestProducts = async () => {
       {/* title */}
       <div className="flex items-center justify-between gap-2">
         <MyTitle>
-          Best Selling <span className="text-primary">Products</span>
+          Explore Our <span className="text-primary">Products</span>
         </MyTitle>
 
         {/* button */}
-        <Button>View All</Button>
+        {/* <Button>View All</Button> */}
       </div>
 
       {/* products */}
       <div className="grid grid-cols-4 gap-7">
-        {products.slice(0, 4).map((product) => (
-          <ProductCard ratingShow={false} key={product.id} product={product} />
+        {products.slice(0, 8).map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
+      </div>
+
+      {/* btn  */}
+      <div className="flex items-center justify-center">
+        <Button>View All</Button>
       </div>
     </MyContainer>
   );
 };
 
-export default BestProducts;
+export default OurProducts;

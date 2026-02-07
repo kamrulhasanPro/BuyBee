@@ -2,9 +2,24 @@ import { ProductType } from "@/types/types";
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { ShoppingCartIcon, StarIcon } from "lucide-react";
 
-const ProductCard = ({ product }: { product: ProductType }) => {
-  const { title, images, price, originalPrice, isNew } = product;
+const ProductCard = ({
+  product,
+  ratingShow = true,
+}: {
+  product: ProductType;
+  ratingShow?: boolean;
+}) => {
+  const {
+    title,
+    images,
+    price,
+    originalPrice,
+    isNew,
+    averageRating,
+    reviewCount,
+  } = product;
 
   const discountParentage =
     originalPrice && ((originalPrice - price) / originalPrice) * 100;
@@ -13,17 +28,16 @@ const ProductCard = ({ product }: { product: ProductType }) => {
     <div className="space-y-4">
       <div className="bg-secondary rounded-lg overflow-hidden relative">
         {/* discount card */}
-        {originalPrice && (
+        {originalPrice ? (
           <div className="absolute bg-[#DB4444] inline-block mt-3 ml-3 px-1 text-white rounded-sm text-sm">
             <span>-{Math.floor(discountParentage)}%</span>
           </div>
-        )}
-
-        {/* is */}
-        {isNew && (
-          <div className="absolute bg-green-400 inline-block mt-3 ml-3 px-1 text-white rounded-sm text-sm">
-            <span>NEW</span>
-          </div>
+        ) : (
+          isNew && (
+            <div className="absolute bg-green-400 inline-block mt-3 ml-3 px-1 text-white rounded-sm text-sm">
+              <span>NEW</span>
+            </div>
+          )
         )}
 
         {/* product image */}
@@ -38,18 +52,41 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         </figure>
 
         {/* cart btn */}
-        <Button className="rounded-none w-full cursor-pointer">Add Cart</Button>
+        <Button className="rounded-none w-full cursor-pointer">
+          <ShoppingCartIcon /> Add Cart
+        </Button>
       </div>
 
       {/* text content info */}
-      <div className=" font-medium">
+      <div className=" font-medium space-y-2">
+        {/* title */}
         <p>{title}</p>
+        {/* price */}
         <p className="text-[#DB4444]">
           ${price}{" "}
           {originalPrice && (
             <del className="text-gray-400">${originalPrice}</del>
           )}
         </p>
+
+        {/* rating */}
+        {ratingShow && (
+          <div className="flex items-center gap-1 text-sm">
+            {[...Array(5)].map((_, i) =>
+              averageRating > i + 1 ? (
+                <StarIcon
+                  className=""
+                  fill="#FBBF24"
+                  key={i}
+                  stroke="#FBBF24"
+                />
+              ) : (
+                <StarIcon key={i} stroke="#FBBF24" />
+              ),
+            )}
+            <span className="text-gray-400">({reviewCount})</span>
+          </div>
+        )}
       </div>
     </div>
   );

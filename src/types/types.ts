@@ -8,7 +8,8 @@ export interface ProductType {
   price: number;
   originalPrice?: number;
   discountPercent?: number;
-  rating: number;
+  reviews: object;
+  averageRating: number;
   reviewCount: number;
   isNew: boolean;
   isFeatured: boolean;
