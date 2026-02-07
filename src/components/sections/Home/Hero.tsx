@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import Slider from "react-slick";
 import { Button } from "@/components/ui/button";
+import ReuseableSlide from "@/components/shares/ReuseableSlide";
 
 export default function Hero() {
   const settings = {
@@ -33,8 +32,8 @@ export default function Hero() {
     },
   ];
   return (
-    <section>
-      <Slider {...settings}>
+    <>
+      <ReuseableSlide settings={settings}>
         {carouselImage.map((carousel, i) => (
           <div key={i}>
             <div className="flex flex-col md:flex-row gap-4 justify-between bg-gradient-to-r from-blue-500/20 via-sky-400/20 to-indigo-500/20 px-6 pt-6 md:h-[calc(100vh-66px-112px-48px)]">
@@ -65,7 +64,7 @@ export default function Hero() {
             </div>
           </div>
         ))}
-      </Slider>
-    </section>
+      </ReuseableSlide>
+    </>
   );
 }
