@@ -2,7 +2,7 @@ import { ProductType } from "@/types/types";
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { QuantityAction } from "../sections/ProductDetails/QuantityAction";
+import { ProductAction } from "../sections/ProductDetails/ProductAction";
 
 const ProductDetailsCard = ({ product }: { product: ProductType }) => {
   const {
@@ -92,7 +92,7 @@ const ProductDetailsCard = ({ product }: { product: ProductType }) => {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row gap-6">
-        <QuantityAction />
+        <ProductAction product={product} />
         {/* delivery free box */}
         <div className="flex-1 flex gap-4 items-center mt-4">
           <img

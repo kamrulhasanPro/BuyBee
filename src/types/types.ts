@@ -18,3 +18,23 @@ export interface ProductType {
   stock: number;
   createdAt: string;
 }
+
+export interface CartItem {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  quantity: number;
+}
+export type CartStateType = {
+  cart: CartItem[];
+  favorite: string[];
+};
+
+export type CartAction =
+  | { type: "ADD_TO_CART"; payload: CartItem }
+  | { type: "REMOVE_TO_CART"; payload: { id: string } }
+  | { type: "INCREASE_QTY"; payload: { id: string } }
+  | { type: "DECREASE_QTY"; payload: { id: string } }
+  | { type: "ADD_FAVORITE"; payload: { id: string } }
+  | { type: "REMOVE_FAVORITE"; payload: { id: string } };

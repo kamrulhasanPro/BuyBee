@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/shares/TopBar";
 import MainHeader from "../components/shares/MainHeader";
 import Navbar from "@/components/shares/Navbar";
+import CartProvider from "@/contexts/CartProvider";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -23,20 +24,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        {/* header */}
-        <header>
-          <TopBar />
-        </header>
-        <div className="sticky top-0 left-0 z-50 bg-white">
-          <MainHeader />
-          <Navbar />
-        </div>
+        <CartProvider>
+          {/* header */}
+          <header>
+            <TopBar />
+          </header>
+          <div className="sticky top-0 left-0 z-50 bg-white">
+            <MainHeader />
+            <Navbar />
+          </div>
 
-        {/* main */}
-        <main>{children}</main>
+          {/* main */}
+          <main>{children}</main>
 
-        {/* footer */}
-        <footer>{/* footer */}</footer>
+          {/* footer */}
+          <footer>{/* footer */}</footer>
+        </CartProvider>
       </body>
     </html>
   );

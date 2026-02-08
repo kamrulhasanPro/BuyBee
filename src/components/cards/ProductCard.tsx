@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { ShoppingCartIcon, StarIcon } from "lucide-react";
 import Link from "next/link";
+import AddToCart from "../buttons/AddToCart";
 
 const ProductCard = ({
   product,
@@ -56,9 +57,18 @@ const ProductCard = ({
         </Link>
 
         {/* cart btn */}
-        <Button className="rounded-none w-full cursor-pointer">
+        {/* <Button className="rounded-none w-full cursor-pointer">
           <ShoppingCartIcon /> Add Cart
-        </Button>
+        </Button> */}
+
+        <AddToCart
+          product={product}
+          trueLabel="Add Cart"
+          falseLabel="Remove Cart"
+          className="w-full rounded-none"
+        >
+          <ShoppingCartIcon />
+        </AddToCart>
       </div>
 
       {/* text content info */}
