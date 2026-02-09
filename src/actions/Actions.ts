@@ -1,7 +1,7 @@
 import { ProductType } from "@/types/types";
 
 export const getProducts = async () => {
-  const res = await fetch(`${process.env.MY_DOMAIN}/data/Products.json`);
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/data/Products.json`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
@@ -17,7 +17,7 @@ export const getSpecificProduct = async (id: string) => {
   const specificProduct = products.find((item: ProductType) => item.id === id);
 
   if (!specificProduct) {
-    return {notFound: true};
+    return { notFound: true };
   }
 
   return specificProduct;

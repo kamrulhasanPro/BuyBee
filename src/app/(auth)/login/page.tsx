@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { doSocialLogin } from "@/actions/AuthActions";
 import MyContainer from "@/components/shares/MyContainer";
@@ -17,7 +17,6 @@ const Login = () => {
         </div>
 
         <form action="" className="flex flex-col gap-3">
-
           {/* email */}
           <input
             type="email"
