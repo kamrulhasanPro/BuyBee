@@ -8,7 +8,7 @@ import ArrowCustom from "@/components/shares/ArrowCustom";
 import BrandsCard from "@/components/cards/BrandsCard";
 
 const ElectronicBrands = () => {
-  const slideRef = useRef(Slider || null);
+  const slideRef = useRef<Slider | null>(null);
 
   type PromoBannerType = {
     id: number;
@@ -21,48 +21,47 @@ const ElectronicBrands = () => {
   };
 
   const promoBanners: PromoBannerType[] = [
-  {
-    id: 1,
-    title: "10% Off On",
-    highlight: "HP Series",
-    image:
-      "https://res.cloudinary.com/dzalserrg/image/upload/v1770461748/pngwim_pvi0x3.png",
-    bg: "bg-rose-700",
-    textColor: "text-white",
-    highlightColor: "text-yellow-300",
-  },
-  {
-    id: 2,
-    title: "10% Off On",
-    highlight: "Apple Series",
-    image:
-      "https://res.cloudinary.com/dzalserrg/image/upload/v1770461739/macbook_hwgzwb.png",
-    bg: "bg-orange-200",
-    textColor: "text-gray-800",
-    highlightColor: "text-red-600",
-  },
-  {
-    id: 3,
-    title: "10% Off On",
-    highlight: "Vivo Series",
-    image:
-      "https://res.cloudinary.com/dzalserrg/image/upload/v1770461779/mobile_cpbmwu.png",
-    bg: "bg-orange-100",
-    textColor: "text-gray-900",
-    highlightColor: "text-blue-600",
-  },
-  {
-    id: 4,
-    title: "70% Off On",
-    highlight: "Tablet Series",
-    image:
-      "https://res.cloudinary.com/dzalserrg/image/upload/v1770461781/tablet_v6cbmj.png",
-     bg: "bg-blue-700",
-    textColor: "text-white",
-    highlightColor: "text-yellow-300",
-  },
-];
-
+    {
+      id: 1,
+      title: "10% Off On",
+      highlight: "HP Series",
+      image:
+        "https://res.cloudinary.com/dzalserrg/image/upload/v1770461748/pngwim_pvi0x3.png",
+      bg: "bg-rose-700",
+      textColor: "text-white",
+      highlightColor: "text-yellow-300",
+    },
+    {
+      id: 2,
+      title: "10% Off On",
+      highlight: "Apple Series",
+      image:
+        "https://res.cloudinary.com/dzalserrg/image/upload/v1770461739/macbook_hwgzwb.png",
+      bg: "bg-orange-200",
+      textColor: "text-gray-800",
+      highlightColor: "text-red-600",
+    },
+    {
+      id: 3,
+      title: "10% Off On",
+      highlight: "Vivo Series",
+      image:
+        "https://res.cloudinary.com/dzalserrg/image/upload/v1770461779/mobile_cpbmwu.png",
+      bg: "bg-orange-100",
+      textColor: "text-gray-900",
+      highlightColor: "text-blue-600",
+    },
+    {
+      id: 4,
+      title: "70% Off On",
+      highlight: "Tablet Series",
+      image:
+        "https://res.cloudinary.com/dzalserrg/image/upload/v1770461781/tablet_v6cbmj.png",
+      bg: "bg-blue-700",
+      textColor: "text-white",
+      highlightColor: "text-yellow-300",
+    },
+  ];
 
   const settings = {
     dots: false,

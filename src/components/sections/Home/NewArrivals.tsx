@@ -8,7 +8,7 @@ import Image from "next/image";
 import ReuseableSlide from "@/components/shares/ReuseableSlide";
 
 const NewArrivals = () => {
-  const slideRef = useRef(Slider || null);
+  const slideRef = useRef<Slider | null>(null);
   const bannerImages = [
     "https://res.cloudinary.com/dzalserrg/image/upload/v1770463057/smartphone-16-pro-discount-sale-banner-social-media-design-template_47987-25305_dszvve.avif",
     "https://res.cloudinary.com/dzalserrg/image/upload/v1770463057/Website_Banner_Mobile_Tile_iPhone_16_Pro_768x432_yx2xm4.jpg",

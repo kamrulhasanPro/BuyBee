@@ -23,7 +23,7 @@ import Slider from "react-slick";
 import ArrowCustom from "@/components/shares/ArrowCustom";
 
 const TopCategory = () => {
-  const slideRef = useRef(Slider || null);
+  const slideRef = useRef<Slider | null>(null);
 
   type CategoryType = {
     id: number;
