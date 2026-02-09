@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useCart } from "@/hooks/useCart";
 import { ProductType } from "@/types/types";
 import { Heart } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export function ProductAction({ product }: { product: ProductType }) {
@@ -13,6 +14,16 @@ export function ProductAction({ product }: { product: ProductType }) {
   const { state, dispatch } = useCart();
 
   const isFavorite = state.favorite.some((id) => id === product.id);
+
+  const cartProduct = {
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    image: product.images[0],
+    quantity: value,
+  };
+
+  const router = useRouter();
 
   return (
     <div className="flex-1 space-y-2">
@@ -38,7 +49,15 @@ export function ProductAction({ product }: { product: ProductType }) {
 
       {/* btn */}
       <div className="space-x-2">
-        <Button className="cursor-pointer ">Buy Now</Button>
+        <Button
+          onClick={() => {
+            dispatch({ type: "ADD_TO_CART", payload: cartProduct });
+            router.push("/checkout");
+          }}
+          className="cursor-pointer "
+        >
+          Buy Now
+        </Button>
 
         {/* add to cart */}
         <AddToCart

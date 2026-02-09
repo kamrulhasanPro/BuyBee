@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "img.icons8.com",
+        // pathname: "/**",
+      },
       // new URL("https://i.ibb.co.com/**"),
       // new URL("https://bk.shajgoj.com/storage/2025/12/sku-11589-y5ou.jpg"),
     ],

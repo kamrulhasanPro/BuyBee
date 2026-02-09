@@ -1,7 +1,7 @@
 import { ProductType } from "@/types/types";
 
 export const getProducts = async () => {
-  const res = await fetch("http://localhost:3000/data/Products.json");
+  const res = await fetch(`${process.env.MY_DOMAIN}/data/Products.json`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
