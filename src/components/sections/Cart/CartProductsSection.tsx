@@ -25,7 +25,7 @@ const CartProductsSection = ({ state, dispatch }: CartContextType) => {
     .toFixed(2);
 
   return (
-    <section className="flex gap-5">
+    <section className="flex flex-col md:flex-row gap-5">
       {/* cart items show */}
       <div className="flex-2 border border-secondary ">
         <Table>
