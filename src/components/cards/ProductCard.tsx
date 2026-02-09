@@ -25,7 +25,7 @@ const ProductCard = ({
   } = product;
 
   const discountParentage =
-    originalPrice && ((originalPrice - price) / originalPrice) * 100 || undefined;
+    originalPrice ? ((originalPrice - price) / originalPrice) * 100 : 0;
 
   return (
     <div className="space-y-4">
