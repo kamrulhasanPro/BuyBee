@@ -44,7 +44,7 @@ const ShoppingForm = () => {
         />
 
         {/* phone, email */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
           <InputCustomBox
             label={"Phone Number"}
             id={"phoneNumber"}
