@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import { doSocialLogin } from "@/actions/AuthActions";
+import SocialLogin from "@/components/cards/SocialLogin";
 import MyContainer from "@/components/shares/MyContainer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -45,24 +46,8 @@ const Register = () => {
         </form>
 
         {/* social login */}
-        <form action={doSocialLogin} className="mt-2">
-          {/* google */}
-          <Button
-            type="submit"
-            name="action"
-            value={"google"}
-            variant={"outline"}
-            className="cursor-pointer rounded-sm w-full"
-          >
-            <Image
-              width="40"
-              height="40"
-              src="https://img.icons8.com/color/48/google-logo.png"
-              alt="google-logo"
-            />{" "}
-            Sign Up To Google Account
-          </Button>
-        </form>
+        <SocialLogin />
+        
         <div className="text-sm text-center mt-4">
           <span className="text-gray-400">Already have account?</span>{" "}
           <Link href={"/login"} className="font-bold">

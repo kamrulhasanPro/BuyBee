@@ -9,8 +9,12 @@ import {
 import { Heart, SearchIcon, ShoppingCart, User } from "lucide-react";
 import { useCart } from "@/hooks/useCart";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
 
 const MainHeader = () => {
+  const { data: session, status } = useSession();
+
   // search
   const searchElement = (
     <Field className="w-full border-none">
@@ -45,12 +49,32 @@ const MainHeader = () => {
         <div className="hidden sm:block sm:flex-6">{searchElement}</div>
 
         {/* icons */}
-        <div className="flex items-center gap-4 text-nowrap sm:flex-2">
+        <div className="flex items-center justify-end gap-4 text-nowrap sm:flex-2">
           {/* login  */}
-          <Link href={"/login"} className="flex items-end gap-1">
-            <User size={32} />
-            <span className="text-[12px] hidden md:block">Sign Up/Sign In</span>
-          </Link>
+          {status === "authenticated" ? (
+            <>
+              <figure
+                className="w-10 h-10 rounded-full overflow-hidden"
+                title={session?.user?.name ?? "User"}
+              >
+                <img
+                  src={
+                    session?.user?.image ??
+                    "https://img.icons8.com/color/48/user-male-circle--v9.png"
+                  }
+                  alt="User avatar"
+                  className="w-full h-full object-cover"
+                />
+              </figure>
+            </>
+          ) : (
+            <Link href={"/login"} className="flex items-end gap-1">
+              <User size={32} />
+              <span className="text-[12px] hidden md:block">
+                Sign Up/Sign In
+              </span>
+            </Link>
+          )}
 
           {/* cart icon  */}
           <div

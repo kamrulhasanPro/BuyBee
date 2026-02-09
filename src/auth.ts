@@ -5,12 +5,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   throw new Error("Missing Google OAuth environment variables");
 }
 
-export const {
-  handlers,
-  auth,
-  signIn,
-  signUp,
-} = NextAuth({
+export const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

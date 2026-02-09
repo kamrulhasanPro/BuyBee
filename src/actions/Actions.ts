@@ -1,7 +1,9 @@
+export const dynamic = "force-dynamic";
 import { ProductType } from "@/types/types";
 
+
 export const getProducts = async () => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/data/Products.json`);
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/data/Products.json`, {cache: 'no-store'});
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
