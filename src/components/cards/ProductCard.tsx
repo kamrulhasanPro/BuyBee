@@ -56,11 +56,6 @@ const ProductCard = ({
           </figure>
         </Link>
 
-        {/* cart btn */}
-        {/* <Button className="rounded-none w-full cursor-pointer">
-          <ShoppingCartIcon /> Add Cart
-        </Button> */}
-
         <AddToCart
           product={product}
           trueLabel="Add Cart"

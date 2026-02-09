@@ -7,7 +7,6 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group";
 import { Heart, SearchIcon, ShoppingCart, User } from "lucide-react";
-import CartIcon from "./CartIcon";
 import { useCart } from "@/hooks/useCart";
 import { useRouter } from "next/navigation";
 
@@ -47,7 +46,6 @@ const MainHeader = () => {
 
         {/* icons */}
         <div className="flex items-center gap-4 text-nowrap sm:flex-2">
-          {/* <CartIcon /> */}
           {/* login  */}
           <Link href={"/login"} className="flex items-end gap-1">
             <User size={32} />
@@ -56,8 +54,8 @@ const MainHeader = () => {
 
           {/* cart icon  */}
           <div
-            onClick={() => router.push("/login")}
-            className="inline-flex relative  items-end gap-1"
+            onClick={() => router.push("/cart")}
+            className="inline-flex relative cursor-pointer items-end gap-1"
           >
             <ShoppingCart size={32} />
             {state?.cart?.length > 0 ? (

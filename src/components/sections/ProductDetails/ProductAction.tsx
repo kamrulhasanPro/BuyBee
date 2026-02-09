@@ -9,7 +9,7 @@ import { Heart } from "lucide-react";
 import { useState } from "react";
 
 export function ProductAction({ product }: { product: ProductType }) {
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(1);
   const { state, dispatch } = useCart();
 
   const isFavorite = state.favorite.some((id) => id === product.id);

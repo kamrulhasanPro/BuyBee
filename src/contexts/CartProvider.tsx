@@ -32,6 +32,28 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         };
       }
 
+      case "INCREASE_QTY": {
+        return {
+          ...state,
+          cart: state.cart.map((item) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item,
+          ),
+        };
+      }
+
+      case "DECREASE_QTY": {
+        return {
+          ...state,
+          cart: state.cart.map((item) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item,
+          ),
+        };
+      }
+
       case "ADD_FAVORITE": {
         return { ...state, favorite: [...state.favorite, action.payload.id] };
       }

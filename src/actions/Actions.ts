@@ -17,7 +17,7 @@ export const getSpecificProduct = async (id: string) => {
   const specificProduct = products.find((item: ProductType) => item.id === id);
 
   if (!specificProduct) {
-    return "Not Found This Product";
+    return {notFound: true};
   }
 
   return specificProduct;
