@@ -6,6 +6,7 @@ import MainHeader from "../components/shares/MainHeader";
 import Navbar from "@/components/shares/Navbar";
 import CartProvider from "@/contexts/CartProvider";
 import SessionProviderContext from "@/contexts/SessionProviderContext";
+import Footer from "@/components/shares/Footer";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -40,7 +41,9 @@ export default function RootLayout({
             <main>{children}</main>
 
             {/* footer */}
-            <footer>{/* footer */}</footer>
+            <footer>
+              <Footer/>
+            </footer>
           </CartProvider>
         </SessionProviderContext>
       </body>
