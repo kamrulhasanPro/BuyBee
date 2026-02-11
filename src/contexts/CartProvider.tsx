@@ -1,6 +1,7 @@
 "use client";
 import { CartAction, CartStateType } from "@/types/types";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useEffect, useReducer, useState } from "react";
+import { json } from "stream/consumers";
 
 // create context
 type CartContextType = {
@@ -21,14 +22,33 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
   // reducer function
   function reducer(state: CartStateType, action: CartAction) {
     switch (action.type) {
+      case "SET_CART": {
+        return { ...state, cart: action.payload };
+      }
+
+      case "SET_FAVORITE": {
+        return { ...state, favorite: action.payload };
+      }
+
       case "ADD_TO_CART": {
+        localStorage.setItem(
+          "cart",
+          JSON.stringify([...state.cart, action.payload]),
+        );
+
         return { ...state, cart: [...state.cart, action.payload] };
       }
 
       case "REMOVE_TO_CART": {
+        const remaining = state.cart.filter(
+          (item) => item.id !== action.payload.id,
+        );
+
+        localStorage.setItem("cart", JSON.stringify([...remaining]));
+
         return {
           ...state,
-          cart: state.cart.filter((item) => item.id !== action.payload.id),
+          cart: remaining,
         };
       }
 
@@ -55,13 +75,23 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       }
 
       case "ADD_FAVORITE": {
+        localStorage.setItem(
+          "favorite",
+          JSON.stringify([...state.favorite, action.payload.id]),
+        );
+
         return { ...state, favorite: [...state.favorite, action.payload.id] };
       }
 
       case "REMOVE_FAVORITE": {
+        const remaining = state.favorite.filter(
+          (id) => id !== action.payload.id,
+        );
+
+        localStorage.setItem("favorite", JSON.stringify([...remaining]));
         return {
           ...state,
-          favorite: state.favorite.filter((id) => id !== action.payload.id),
+          favorite: remaining,
         };
       }
 
@@ -71,6 +101,18 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      dispatch({ type: "SET_CART", payload: JSON.parse(storedCart) });
+    }
+
+    const storeFavorite = localStorage.getItem("favorite");
+    if (storeFavorite) {
+      dispatch({ type: "SET_FAVORITE", payload: JSON.parse(storeFavorite) });
+    }
+  }, []);
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>

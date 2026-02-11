@@ -32,6 +32,8 @@ export type CartStateType = {
 };
 
 export type CartAction =
+  | { type: "SET_CART"; payload: CartItem[] }
+  | { type: "SET_FAVORITE"; payload: string[] }
   | { type: "ADD_TO_CART"; payload: CartItem }
   | { type: "REMOVE_TO_CART"; payload: { id: string } }
   | { type: "INCREASE_QTY"; payload: { id: string } }
