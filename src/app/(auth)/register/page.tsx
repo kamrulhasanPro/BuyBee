@@ -1,6 +1,5 @@
 "use client";
 
-import { doSocialLogin } from "@/actions/AuthActions";
 import SocialLogin from "@/components/cards/SocialLogin";
 import MyContainer from "@/components/shares/MyContainer";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ const Register = () => {
           <p>Enter your information.</p>
         </div>
 
-        <form action="" className="flex flex-col gap-3">
+        <form  className="flex flex-col gap-3">
           {/* name */}
           <input
             type="text"

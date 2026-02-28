@@ -34,28 +34,24 @@ export const handler = NextAuth({
         // validation
         if (!credentials) return null;
 
-        const { email, password }: { email: string; password: string } =
-          credentials;
-
-        if (!email || !password) {
-          return null;
-        }
-
         // check email
-        const user = users.find((u) => u.email === email);
+        const user = users.find((u) => u.email === credentials?.email);
         if (!user) {
           return null;
         }
 
         // password check
-        const isRightPassword = users.find((u) => u.password === password);
+        const isRightPassword = user.password === credentials?.password;
         if (!isRightPassword) {
           return null;
         }
 
         console.log("user correct", user);
         // Return null if user data could not be retrieved
-        return user;
+        return {
+          id: String(user?.id),
+          email: user?.email,
+        };
       },
     }),
   ],
