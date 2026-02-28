@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   compiler: {
-    removeConsole: true,
+    removeConsole: false,
   },
   images: {
     remotePatterns: [

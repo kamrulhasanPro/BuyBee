@@ -5,7 +5,9 @@
     "slug": "asus-fhd-gaming-laptop",
     "categoryId": "laptops",
     "brand": "ASUS",
-    "images": ["https://res.cloudinary.com/demo/image/upload/laptop1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305673/203be522b7b02d10672f6f6147762cf52bfcfc54_fncgik.png"
+    ],
 
     "description": "The ASUS FHD Gaming Laptop delivers powerful performance with a high-refresh-rate display, designed for gamers and power users who need speed and reliability.",
     "keyFeatures": [
@@ -35,7 +37,9 @@
     "slug": "ips-lcd-gaming-monitor",
     "categoryId": "monitors",
     "brand": "MSI",
-    "images": ["https://res.cloudinary.com/demo/image/upload/monitor1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305673/5e634682db5174aff99bb9337d2dc9598a0b44e4_pyj5jr.png"
+    ],
 
     "description": "This IPS LCD gaming monitor provides vibrant colors, sharp visuals, and smooth performance for immersive gaming and professional use.",
     "keyFeatures": [
@@ -64,7 +68,9 @@
     "slug": "havit-hv-g92-gamepad",
     "categoryId": "gaming",
     "brand": "HAVIT",
-    "images": ["https://res.cloudinary.com/demo/image/upload/gamepad1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1770461781/tablet_v6cbmj.png"
+    ],
 
     "description": "The HAVIT HV-G92 Gamepad offers precise controls and ergonomic design, making it ideal for PC and console gamers.",
     "keyFeatures": [
@@ -93,7 +99,9 @@
     "slug": "ak-900-wired-keyboard",
     "categoryId": "accessories",
     "brand": "AK",
-    "images": ["https://res.cloudinary.com/demo/image/upload/keyboard1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305673/e59d9f348cc24eeff489863523b63971c3ff8e4a_zufhme.png"
+    ],
 
     "description": "The AK-900 Wired Keyboard is built for everyday productivity with a comfortable layout and responsive keys.",
     "keyFeatures": [
@@ -122,7 +130,9 @@
     "slug": "apple-macbook-air-2025",
     "categoryId": "laptops",
     "brand": "Apple",
-    "images": ["https://res.cloudinary.com/demo/image/upload/macbook1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305897/macbook_PNG35_oowfcd.png"
+    ],
 
     "description": "Apple MacBook Air (2025) features the latest Apple silicon, delivering exceptional performance, battery life, and a premium design.",
     "keyFeatures": [
@@ -152,7 +162,9 @@
     "slug": "iphone-15-pro-max",
     "categoryId": "mobiles",
     "brand": "Apple",
-    "images": ["https://res.cloudinary.com/demo/image/upload/iphone1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305954/iup-overview-landing-hero-202509_FMT_WHH_fzetri.png"
+    ],
 
     "description": "The iPhone 15 Pro Max combines cutting-edge performance, an advanced camera system, and a stunning display.",
     "keyFeatures": [
@@ -181,7 +193,9 @@
     "slug": "logitech-wireless-headphones",
     "categoryId": "accessories",
     "brand": "Logitech",
-    "images": ["https://res.cloudinary.com/demo/image/upload/headphone1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306009/zone-vibe-wireless-mic-down-graphite-1-new_tppid1.png"
+    ],
 
     "description": "Logitech Wireless Headphones deliver clear sound and long-lasting comfort for work, gaming, and entertainment.",
     "keyFeatures": [
@@ -210,7 +224,9 @@
     "slug": "sony-playstation-controller",
     "categoryId": "gaming",
     "brand": "Sony",
-    "images": ["https://res.cloudinary.com/demo/image/upload/controller1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
+    ],
 
     "description": "The Sony PlayStation Controller offers precise controls, haptic feedback, and an ergonomic design for immersive gameplay.",
     "keyFeatures": [
@@ -239,7 +255,10 @@
     "slug": "samsung-curved-monitor",
     "categoryId": "monitors",
     "brand": "Samsung",
-    "images": ["https://res.cloudinary.com/demo/image/upload/monitor2.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306101/uk-odyssey-g4-27g40b-ls27bg400euxxu-532868415_c4959097-9371-440a-ab4b-290653b820f4_gynntr.png",
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306129/CF39HeroGallery_s8esd6.png"
+    ],
 
     "description": "The Samsung Curved Monitor provides an immersive viewing experience with a sleek design and vibrant visuals.",
     "keyFeatures": [
@@ -269,7 +288,9 @@
     "slug": "redragon-mechanical-rgb-keyboard",
     "categoryId": "accessories",
     "brand": "Redragon",
-    "images": ["https://res.cloudinary.com/demo/image/upload/keyboard2.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772305673/e59d9f348cc24eeff489863523b63971c3ff8e4a_zufhme.png"
+    ],
 
     "description": "The Redragon Mechanical RGB Keyboard is designed for gamers who demand precision, durability, and customizable lighting.",
     "keyFeatures": [
@@ -298,7 +319,10 @@
     "slug": "apple-ipad-air-2025",
     "categoryId": "tablets",
     "brand": "Apple",
-    "images": ["https://res.cloudinary.com/demo/image/upload/ipad1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306206/filters_3Aformat_28png_29_3Aupscale_28_29_r5lutf.png",
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306207/spin_reverse_static__ehmkt90jzu6a_large_dygzhp.png"
+    ],
 
     "description": "The Apple iPad Air (2025) delivers powerful performance and versatility in a thin and lightweight design.",
     "keyFeatures": [
@@ -327,7 +351,9 @@
     "slug": "seagate-1tb-external-hard-drive",
     "categoryId": "storage",
     "brand": "Seagate",
-    "images": ["https://res.cloudinary.com/demo/image/upload/harddrive1.png"],
+    "images": [
+      "https://res.cloudinary.com/dzalserrg/image/upload/v1772306301/1-1-large-640x640_qkerf9.png"
+    ],
 
     "description": "The Seagate 1TB External Hard Drive offers reliable storage and fast data transfer for backups and everyday use.",
     "keyFeatures": [

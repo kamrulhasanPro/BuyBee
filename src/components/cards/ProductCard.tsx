@@ -24,8 +24,9 @@ const ProductCard = ({
     reviewCount,
   } = product;
 
-  const discountParentage =
-    originalPrice ? ((originalPrice - price) / originalPrice) * 100 : 0;
+  const discountParentage = originalPrice
+    ? ((originalPrice - price) / originalPrice) * 100
+    : 0;
 
   return (
     <div className="space-y-4">
@@ -45,9 +46,9 @@ const ProductCard = ({
 
         {/* product image */}
         <Link href={`/products/${id}`}>
-          <figure className="p-3 flex items-center justify-center">
+          <figure className="p-3 flex items-center justify-center h-54">
             <Image
-              src="https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
+              src={images[0]}
               width={200}
               height={200}
               alt={title}
