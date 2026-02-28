@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from "react";
 
 const Login = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const from = e.target;
     const email = from.email.value;
