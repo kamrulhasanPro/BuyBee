@@ -1,6 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
+import User from "./modules/User";
+import { connectDB } from "./lib/db";
 
 if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   throw new Error("Missing Google OAuth environment variables");
@@ -34,8 +36,11 @@ export const handler = NextAuth({
         // validation
         if (!credentials) return null;
 
+        // dbConnect
+        await connectDB();
+
         // check email
-        const user = users.find((u) => u.email === credentials?.email);
+        const user = await User.findOne({ email: credentials?.email });
         if (!user) {
           return null;
         }
@@ -51,8 +56,10 @@ export const handler = NextAuth({
         return {
           id: String(user?.id),
           email: user?.email,
+          name: user?.name,
         };
       },
     }),
   ],
+  
 });

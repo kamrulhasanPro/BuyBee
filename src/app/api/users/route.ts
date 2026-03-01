@@ -35,12 +35,14 @@ export async function POST(req: NextRequest) {
     const user = await req.json();
     console.log(user);
 
+    // check user
     const isExistUser = await User.findOne({ email: user?.email });
 
     if (isExistUser) {
       return NextResponse.json({ error: "Already Exist this user." });
     }
 
+    // create user
     const newUser = new User(user);
     await newUser.save();
     return NextResponse.json({ message: "success", newUser });
