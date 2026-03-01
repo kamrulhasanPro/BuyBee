@@ -3,11 +3,18 @@ import { getProducts } from "@/actions/Actions";
 import ProductCard from "@/components/cards/ProductCard";
 import MyContainer from "@/components/shares/MyContainer";
 import MyTitle from "@/components/shares/MyTitle";
+import EmptyProducts from "@/components/cards/EmptyProducts";
 import { ProductType } from "@/types/types";
 import React from "react";
 
-const Products = async () => {
-  const products: ProductType[] = await getProducts();
+const Products = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ search: string | undefined }>;
+}) => {
+  const { search = "" } = await searchParams;
+
+  const products: ProductType[] = await getProducts({ search });
 
   return (
     <MyContainer className="space-y-10">
@@ -19,11 +26,15 @@ const Products = async () => {
       </div>
 
       {/* products */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-7">
-        {products.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
-      </div>
+      {products.length === 0 ? (
+        <EmptyProducts/>
+      ) : (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-7">
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
+      )}
     </MyContainer>
   );
 };

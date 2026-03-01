@@ -8,30 +8,53 @@ import {
 } from "@/components/ui/input-group";
 import { Heart, SearchIcon, ShoppingCart, User } from "lucide-react";
 import { useCart } from "@/hooks/useCart";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 
 const MainHeader = () => {
   const { data: session, status } = useSession();
+  const searchParams = useSearchParams();
+  const newParams = new URLSearchParams(searchParams.toString());
+  const searchValue = newParams.get("search") || "";
+  const { state } = useCart();
+  const router = useRouter();
+
+  // search submit
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const value = e.target.search.value;
+    if (!value) {
+      if (searchValue) {
+        newParams.delete("search");
+        router.push(`/products?${newParams.toString()}`);
+      }
+    } else {
+      newParams.set("search", value);
+      router.push(`/products?${newParams.toString()}`);
+    }
+  };
 
   // search
   const searchElement = (
-    <Field className="w-full border-none">
-      <InputGroup className="bg-[#F0F8FF] border-none">
-        <InputGroupInput
-          id="inline-start-input"
-          placeholder="Search Items here........"
-        />
-        <InputGroupAddon align="inline-end">
-          <SearchIcon className="text-muted-foreground" />
-        </InputGroupAddon>
-      </InputGroup>
-    </Field>
+    <form onSubmit={handleSubmit}>
+      <Field className="w-full border-none">
+        <InputGroup className="bg-[#F0F8FF] border-none">
+          <InputGroupInput
+            name="search"
+            defaultValue={searchValue}
+            id="inline-start-input"
+            placeholder="Search Items here........"
+          />
+          <InputGroupAddon align="inline-end">
+            <button className="mr-2 cursor-pointer" type="submit">
+              <SearchIcon className="text-muted-foreground" />
+            </button>
+          </InputGroupAddon>
+        </InputGroup>
+      </Field>
+    </form>
   );
-
-  const { state } = useCart();
-  const router = useRouter();
 
   return (
     // main header

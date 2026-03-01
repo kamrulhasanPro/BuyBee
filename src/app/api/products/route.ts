@@ -1,11 +1,19 @@
 import { connectDB } from "@/lib/db";
 import Product from "@/modules/Product";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
+    const search = request.nextUrl.searchParams.get("search");
+
+    console.log({ search, name: "server" });
+    const query = search
+      ? {
+          title: { $regex: search, $options: "i" },
+        }
+      : {};
     await connectDB();
-    const products = await Product.find();
+    const products = await Product.find(query).lean();
     return NextResponse.json(products);
   } catch (error) {
     return NextResponse.json(
@@ -13,7 +21,7 @@ export async function GET() {
         message: "Something went wrong....",
         error,
       },
-      { status: 200 },
+      { status: 500 },
     );
   }
 }

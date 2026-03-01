@@ -1,5 +1,4 @@
 "use client";
-
 import SocialLogin from "@/components/cards/SocialLogin";
 import MyContainer from "@/components/shares/MyContainer";
 import { Button } from "@/components/ui/button";
@@ -52,7 +51,7 @@ const Login = () => {
         <SocialLogin />
 
         <div className="text-sm text-center mt-4">
-          <span className="text-gray-400">Don't have account?</span>{" "}
+          <span className="text-gray-400">Don&apos;t have account?</span>{" "}
           <Link href={"/register"} className="font-bold">
             Register
           </Link>

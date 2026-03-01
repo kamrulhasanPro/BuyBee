@@ -1,9 +1,19 @@
 import { ProductType } from "@/types/types";
 
 // get all products
-export const getProducts = async (): Promise<ProductType[]> => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/products`, {
-    next: { revalidate: 60 },
+export const getProducts = async ({
+  search,
+}: {
+  search?: string | undefined;
+} = {}): Promise<ProductType[]> => {
+  console.log({ search, name: "action" });
+
+  const url = search
+    ? `${process.env.NEXTAUTH_URL}/api/products?search=${search}`
+    : `${process.env.NEXTAUTH_URL}/api/products`;
+
+  const res = await fetch(url, {
+    ...(search ? { cache: "no-store" } : { next: { revalidate: 60 } }),
   });
 
   if (!res.ok) {

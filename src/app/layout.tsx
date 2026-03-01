@@ -7,6 +7,7 @@ import Navbar from "@/components/shares/Navbar";
 import CartProvider from "@/contexts/CartProvider";
 import SessionProviderContext from "@/contexts/SessionProviderContext";
 import Footer from "@/components/shares/Footer";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -33,7 +34,9 @@ export default function RootLayout({
               <TopBar />
             </header>
             <div className="sticky top-0 left-0 z-50 bg-white">
-              <MainHeader />
+              <Suspense fallback={<div>Loading..</div>}>
+                <MainHeader />
+              </Suspense>
               <Navbar />
             </div>
 
@@ -42,7 +45,7 @@ export default function RootLayout({
 
             {/* footer */}
             <footer>
-              <Footer/>
+              <Footer />
             </footer>
           </CartProvider>
         </SessionProviderContext>
