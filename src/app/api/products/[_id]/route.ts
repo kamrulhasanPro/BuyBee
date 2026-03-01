@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { _id: ObjectId } },
+  { params }: { params: Promise<{ _id: string }> },
 ) {
   try {
     await connectDB();

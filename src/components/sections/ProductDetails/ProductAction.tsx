@@ -13,10 +13,10 @@ export function ProductAction({ product }: { product: ProductType }) {
   const [value, setValue] = useState(1);
   const { state, dispatch } = useCart();
 
-  const isFavorite = state.favorite.some((id) => id === product.id);
+  const isFavorite = state.favorite.some((id) => id === product._id);
 
   const cartProduct = {
-    id: product.id,
+    id: product._id,
     title: product.title,
     price: product.price,
     image: product.images[0],
@@ -73,9 +73,9 @@ export function ProductAction({ product }: { product: ProductType }) {
             isFavorite
               ? dispatch({
                   type: "REMOVE_FAVORITE",
-                  payload: { id: product.id },
+                  payload: { id: product._id },
                 })
-              : dispatch({ type: "ADD_FAVORITE", payload: { id: product.id } })
+              : dispatch({ type: "ADD_FAVORITE", payload: { id: product._id } })
           }
           variant={"outline"}
           size={"icon"}

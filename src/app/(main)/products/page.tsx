@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getProducts } from "@/actions/Actions";
 import ProductCard from "@/components/cards/ProductCard";
 import MyContainer from "@/components/shares/MyContainer";

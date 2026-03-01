@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getSpecificProduct } from "@/actions/Actions";
 import ProductDetailsCard from "@/components/cards/ProductDetailsCard";
 import RatingSection from "@/components/sections/ProductDetails/RatingSection";
@@ -16,7 +17,7 @@ const ProductDetailsPage = async ({
   const product = await getSpecificProduct(id);
   console.log(product);
 
-  if (product?.notFound) {
+  if (!product || "notFound" in product) {
     return (
       <MyContainer className="flex items-center justify-center">
         <div className="max-w-96 flex flex-col items-center justify-center text-center gap-2 border-2 border-red-400/20 p-4 rounded-lg">

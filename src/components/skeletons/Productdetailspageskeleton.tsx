@@ -1,5 +1,7 @@
 // ─── ProductDetailsCard Skeleton ─────────────────────────────────────────────
 
+import MyContainer from "../shares/MyContainer";
+
 const ProductDetailsCardSkeleton = () => {
   return (
     <section className="animate-pulse">
@@ -116,10 +118,10 @@ const RatingSectionSkeleton = () => {
 
 const ProductDetailsPageSkeleton = () => {
   return (
-    <div className="space-y-10">
+    <MyContainer className="space-y-10">
       <ProductDetailsCardSkeleton />
       <RatingSectionSkeleton />
-    </div>
+    </MyContainer>
   );
 };
 

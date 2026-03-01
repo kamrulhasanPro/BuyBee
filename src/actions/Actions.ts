@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import { ProductType } from "@/types/types";
 
 // get all products
