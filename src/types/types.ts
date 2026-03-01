@@ -40,3 +40,9 @@ export type CartAction =
   | { type: "DECREASE_QTY"; payload: { id: string } }
   | { type: "ADD_FAVORITE"; payload: { id: string } }
   | { type: "REMOVE_FAVORITE"; payload: { id: string } };
+
+export interface UserType {
+  name: string;
+  email: string;
+  password: string;
+}
