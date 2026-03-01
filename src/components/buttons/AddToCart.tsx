@@ -22,14 +22,14 @@ const AddToCart = ({
   const { state, dispatch } = useCart();
   // console.log(state);
   const cartProduct = {
-    id: product.id,
+    id: product._id,
     title: product.title,
     price: product.price,
     image: product.images[0],
     quantity: value,
   };
 
-  const isCarted = state.cart.some((item) => item.id === product.id);
+  const isCarted = state.cart.some((item) => item.id === product._id);
 
   return (
     <>
@@ -38,7 +38,7 @@ const AddToCart = ({
           isCarted
             ? dispatch({
                 type: "REMOVE_TO_CART",
-                payload: { id: product.id },
+                payload: { id: product._id },
               })
             : dispatch({ type: "ADD_TO_CART", payload: cartProduct })
         }

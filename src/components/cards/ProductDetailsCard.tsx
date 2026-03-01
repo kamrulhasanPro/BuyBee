@@ -6,7 +6,7 @@ import { ProductAction } from "../sections/ProductDetails/ProductAction";
 
 const ProductDetailsCard = ({ product }: { product: ProductType }) => {
   const {
-    id,
+    _id,
     title,
     images,
     description,
@@ -24,11 +24,9 @@ const ProductDetailsCard = ({ product }: { product: ProductType }) => {
     <section>
       <div className="flex flex-col md:flex-row gap-6">
         {/* product img */}
-        <figure className="flex-1 bg-[#FFFAFA] flex items-center justify-center rounded-lg">
+        <figure className="flex-1 bg-[#FFFAFA] flex items-center justify-center rounded-xl">
           <Image
-            src={
-              "https://res.cloudinary.com/dzalserrg/image/upload/v1770475980/GP11_PRD3_1_mcikph.png"
-            }
+            src={images[0]}
             alt={title}
             width={400}
             height={400}
@@ -91,7 +89,7 @@ const ProductDetailsCard = ({ product }: { product: ProductType }) => {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row gap-6">
+      <div className="flex flex-col-reverse md:flex-row gap-6 mt-4">
         <ProductAction product={product} />
         {/* delivery free box */}
         <div className="flex-1 flex gap-4 items-center mt-4">

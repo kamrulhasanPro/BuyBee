@@ -14,7 +14,7 @@ const ProductCard = ({
   ratingShow?: boolean;
 }) => {
   const {
-    id,
+    _id,
     title,
     images,
     price,
@@ -45,7 +45,7 @@ const ProductCard = ({
         )}
 
         {/* product image */}
-        <Link href={`/products/${id}`}>
+        <Link href={`/products/${_id}`}>
           <figure className="p-3 flex items-center justify-center h-54">
             <Image
               src={images[0]}
@@ -70,7 +70,7 @@ const ProductCard = ({
       {/* text content info */}
       <div className=" font-medium space-y-2">
         {/* title */}
-        <Link href={`/products/${id}`}>{title}</Link>
+        <Link href={`/products/${_id}`}>{title}</Link>
         {/* price */}
         <p className="text-[#DB4444]">
           ${price}{" "}

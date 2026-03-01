@@ -1,5 +1,5 @@
 export interface ProductType {
-  id: string;
+  _id: string;
   title: string;
   description: string;
   keyFeatures: string[];
@@ -16,7 +16,8 @@ export interface ProductType {
   isNew: boolean;
   isFeatured: boolean;
   stock: number;
-  createdAt: string;
+  createdAt: string | Date;
+  updatedAt: string | Date;
 }
 
 export interface CartItem {

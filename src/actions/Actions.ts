@@ -1,9 +1,11 @@
 export const dynamic = "force-dynamic";
 import { ProductType } from "@/types/types";
 
-
-export const getProducts = async () => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/data/Products.json`, {cache: 'no-store'});
+// get all products
+export const getProducts = async (): Promise<ProductType[]> => {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/products`, {
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
@@ -13,14 +15,18 @@ export const getProducts = async () => {
   return data;
 };
 
-export const getSpecificProduct = async (id: string) => {
-  const products = await getProducts();
+// get product by id
+export const getSpecificProduct = async (
+  id: string,
+): Promise<ProductType | { notFound: true }> => {
+  const specificProduct = await fetch(
+    `${process.env.NEXTAUTH_URL}/api/products/${id}`,
+    { next: { tags: ["product", `product-${id}`] } },
+  );
 
-  const specificProduct = products.find((item: ProductType) => item.id === id);
-
-  if (!specificProduct) {
+  if (!specificProduct.ok) {
     return { notFound: true };
   }
 
-  return specificProduct;
+  return await specificProduct.json();
 };
